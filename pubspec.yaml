@@ -1,8 +1,7 @@
 name: textless
 description: Less is More; Widgetless Text
-version: 6.6.6
-author: Sheldon Soo
-homepage: https://github.com/sooxt98/textless
+version: 7.0.0
+homepage: https://github.com/alguintu/textless
 
 environment:
   sdk: '>=2.12.0 <3.0.0'

@@ -1,8 +1,6 @@
 library textless;
 
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
 class ThemedText extends StatelessWidget {
   const ThemedText({
@@ -138,11 +136,15 @@ extension TextLess on String {
   @Deprecated("Use [displayLarge]")
   ThemedText get h1 => ThemedText(data: this, style: (t) => t.displayLarge!);
 
+  ThemedText get displayLarge => ThemedText(data: this, style: (t) => t.displayLarge!);
+
   @Deprecated("Use [displayMedium]")
   ThemedText get h2 => ThemedText(data: this, style: (t) => t.displayMedium!);
+  ThemedText get displayMedium => ThemedText(data: this, style: (t) => t.displayMedium!);
 
   @Deprecated("Use [displaySmall]")
   ThemedText get h3 => ThemedText(data: this, style: (t) => t.displaySmall!);
+  ThemedText get displaySmall => ThemedText(data: this, style: (t) => t.displaySmall!);
 
   @Deprecated("Use [headlineMedium]")
   ThemedText get h4 => ThemedText(data: this, style: (t) => t.headlineMedium!);
@@ -156,12 +158,15 @@ extension TextLess on String {
 
   @Deprecated("Use [titleLarge]")
   ThemedText get h6 => ThemedText(data: this, style: (t) => t.titleLarge!);
+  ThemedText get titleLarge => ThemedText(data: this, style: (t) => t.titleLarge!);
 
   @Deprecated("Use [titleMedium]")
   ThemedText get s1 => ThemedText(data: this, style: (t) => t.titleMedium!);
+  ThemedText get titleMedium => ThemedText(data: this, style: (t) => t.titleMedium!);
 
   @Deprecated("Use [titleSmall]")
   ThemedText get s2 => ThemedText(data: this, style: (t) => t.titleSmall!);
+  ThemedText get titleSmall => ThemedText(data: this, style: (t) => t.titleSmall!);
 
   @Deprecated("Use [bodyLarge]")
   ThemedText get b1 => ThemedText(data: this, style: (t) => t.bodyLarge!);
