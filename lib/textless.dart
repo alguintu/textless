@@ -35,6 +35,8 @@ class ThemedText extends StatelessWidget {
 
   ThemedText get lineThrough => textless(TextStyle(decoration: TextDecoration.lineThrough));
 
+  ThemedText lineThroughIf(bool v) => textless(TextStyle(decoration: v ? TextDecoration.lineThrough : TextDecoration.none));
+
   ThemedText get underline => textless(TextStyle(decoration: TextDecoration.underline));
 
   ThemedText get overline => textless(TextStyle(decoration: TextDecoration.overline));
@@ -140,10 +142,12 @@ extension TextLess on String {
 
   @Deprecated("Use [displayMedium]")
   ThemedText get h2 => ThemedText(data: this, style: (t) => t.displayMedium!);
+
   ThemedText get displayMedium => ThemedText(data: this, style: (t) => t.displayMedium!);
 
   @Deprecated("Use [displaySmall]")
   ThemedText get h3 => ThemedText(data: this, style: (t) => t.displaySmall!);
+
   ThemedText get displaySmall => ThemedText(data: this, style: (t) => t.displaySmall!);
 
   @Deprecated("Use [headlineMedium]")
@@ -158,14 +162,17 @@ extension TextLess on String {
 
   @Deprecated("Use [titleLarge]")
   ThemedText get h6 => ThemedText(data: this, style: (t) => t.titleLarge!);
+
   ThemedText get titleLarge => ThemedText(data: this, style: (t) => t.titleLarge!);
 
   @Deprecated("Use [titleMedium]")
   ThemedText get s1 => ThemedText(data: this, style: (t) => t.titleMedium!);
+
   ThemedText get titleMedium => ThemedText(data: this, style: (t) => t.titleMedium!);
 
   @Deprecated("Use [titleSmall]")
   ThemedText get s2 => ThemedText(data: this, style: (t) => t.titleSmall!);
+
   ThemedText get titleSmall => ThemedText(data: this, style: (t) => t.titleSmall!);
 
   @Deprecated("Use [bodyLarge]")
